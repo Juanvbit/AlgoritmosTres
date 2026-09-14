@@ -184,3 +184,31 @@ void separador(const string& titulo) {
     cout << "  " << titulo << endl;
     cout << string(55, '=') << endl;
 }
+
+int main (){
+    Termino* nodo= nullptr;
+    Termino* nodo2= nullptr;
+    float coeficiente=0;
+    int exponente=0;
+    cout << "Ingresa el coeficiente";
+    cin >> coeficiente;
+    nodo = insertarTermino (nodo, 4.0f, 3);
+    nodo = insertarTermino (nodo, -2.0f, 1);
+    nodo = insertarTermino (nodo, 5.0f, 0);
+    nodo = insertarTermino (nodo, 4.0f, 3);
+    cout << "Polinomio (x)";
+    imprimirPolinomio(nodo);
+    cout << "Grado: " << gradoPolinomio(nodo) << endl;
+    cout << "Nodos: " << contarTerminos(nodo) << endl;
+    for (int i = 0; i < 4; i++)
+    {
+        cout << "Ingresa el coeficiente";
+        cin >> coeficiente;
+        cout << "Ingresa el exponente";
+        cin >> exponente;
+        nodo2 =insertarTermino (nodo2,coeficiente,exponente);
+    }
+    imprimirPolinomio(nodo2);
+
+
+}
