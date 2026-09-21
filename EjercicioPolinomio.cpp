@@ -189,25 +189,31 @@ int main (){
     Termino* nodo= nullptr;
     Termino* nodo2= nullptr;
     float coeficiente=0;
+    float coeficiente2=0;
     int exponente=0;
-    cout << "Ingresa el coeficiente";
-    cin >> coeficiente;
-    nodo = insertarTermino (nodo, 4.0f, 3);
-    nodo = insertarTermino (nodo, -2.0f, 1);
-    nodo = insertarTermino (nodo, 5.0f, 0);
-    nodo = insertarTermino (nodo, 4.0f, 3);
-    cout << "Polinomio (x)";
-    imprimirPolinomio(nodo);
-    cout << "Grado: " << gradoPolinomio(nodo) << endl;
-    cout << "Nodos: " << contarTerminos(nodo) << endl;
-    for (int i = 0; i < 4; i++)
+    int exponente2=0;
+    for(int i=0;i<7;i++)
     {
-        cout << "Ingresa el coeficiente";
-        cin >> coeficiente;
-        cout << "Ingresa el exponente";
-        cin >> exponente;
-        nodo2 =insertarTermino (nodo2,coeficiente,exponente);
+        cout<<"Ingrese el coeficiente del termino "<<i+1<<": ";
+        cin>>coeficiente;
+        cout<<"Ingrese el exponente del termino "<<i+1<<": ";
+        cin>>exponente;
+        nodo=insertarTermino(nodo,coeficiente,exponente);
     }
+
+    cout << "\nPolinomio 1: ";
+    imprimirPolinomio(nodo);
+
+    for(int i=0;i<7;i++)
+    {
+        cout<<"Ingrese el coeficiente del termino "<<i+1<<": ";
+        cin>>coeficiente2;
+        cout<<"Ingrese el exponente del termino "<<i+1<<": ";
+        cin>>exponente2;
+        nodo2=insertarTermino(nodo2,coeficiente2,exponente2);
+    }
+
+    cout << "\nPolinomio 2: ";
     imprimirPolinomio(nodo2);
     cout <<"Liberar memoria"<< endl;
     int liberar = 0;
