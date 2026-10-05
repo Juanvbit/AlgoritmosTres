@@ -128,7 +128,7 @@ public:
 int main() {
     PolF1 polinomio;
 
-    cout << "=== INGRESO INTERACTIVO DE TERMINOS (PolF1) ===" << endl;
+    cout << "=== INGRESO DE TERMINOS (PolF1) ===" << endl;
 
     polinomio.leerPorConsola();
 
